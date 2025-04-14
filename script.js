@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const chatbotContainer = document.getElementById("chatbot-container");
-    const clostBtn = document.getElementById("close-btn");
+    const closetBtn = document.getElementById("close-btn");
     const sendBtn = document.getElementById("send-btn");
     const chatBotInput = document.getElementById("chatbot-input");
     const chatbotMessages = document.getElementById("chatbot-messages");
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
       chatbotContainer.classList.remove("hidden");
       chatbotIcon.style.display = "none";
     });
-    clostBtn.addEventListener("click", () => {
+    closetBtn.addEventListener("click", () => {
       chatbotContainer.classList.add("hidden");
       chatbotIcon.style.display = "flex";
     });
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const userMessage = document.getElementById("chatbot-input").value.trim();
     if (userMessage) {
       appendMessage("user", userMessage);
-      document.getElementById("chatbot-input").value.trim();
+      document.getElementById("chatbot-input").value="";
       getBotResponse(userMessage);
     }
   }
