@@ -37,7 +37,9 @@ document.addEventListener("DOMContentLoaded", function () {
     messageElement.classList.add("message", sender);
     messageElement.textContent = message;
     messageContainer.appendChild(messageElement);
-    messageContainer.scrollTop = messageContainer.scrollHeight;
+    setTimeout(() => {
+        messageContainer.scrollTop = messageContainer.scrollHeight;
+    }, 0); 
   }
   
   async function getBotResponse(userMessage) {

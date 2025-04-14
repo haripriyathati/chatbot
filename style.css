@@ -83,6 +83,9 @@ body {
   #chatbot-messages {
     display: flex;
     flex-direction: column;
+    max-height: 300px; /* Or whatever height fits your UI */
+    overflow-y: auto;
+    scroll-behavior: smooth;
   }
   
   .message {
